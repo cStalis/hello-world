@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: gcc:4.9
+
+    steps:
+      - checkout
+      
+      - run:
+          name: Build
+          command: gcc -o main main.c
+
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+
+      - run:
+          name: Print the Current Time
+          command: date
