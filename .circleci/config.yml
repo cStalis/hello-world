@@ -9,7 +9,7 @@ jobs:
       
       - run:
           name: Build
-          command: gcc -o main main.c
+          command: ls && gcc -o main main.c && ls
           
       - run:
           name: Run_main
